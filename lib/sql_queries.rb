@@ -34,8 +34,8 @@ def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_th
 FROM users 
 JOIN pledges 
 ON users.id == pledges.user_id 
-ORDER BY users.id 
-GROUP BY ;"
+GROUP BY users.id 
+ORDER BY SUM(;"
 end
 
 def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_category
